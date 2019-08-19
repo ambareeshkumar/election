@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body{background-color:#e3e0cc;}
+input[type=text], select {
+  width: 15%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color:#f1f1f1;
+}
+
+input[type=submit] {
+  width: 20%;
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: red;
+  border-radius: 100px;
+  cursor: pointer;
+  align-items: center;
+}
+
+input[type=submit]:hover {
+  background-color:grey ;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+ul{
+list-style-type:none;
+margin:0;
+padding:25px;
+overflow:hidden;
+background-color:green;
+}
+li{
+float:left;
+}
+li a{
+dispaly:inline-block;
+color:black;
+text-align:left;
+padding:14px 16px;
+text-decoration:inline;
+}
+li a:hover{
+ background-color:white;
+}
+.active{
+   background-color:red;
+}
+body{
+background-image:url("background.jpg");
+background-repeat: no-repeat;
+background-color: #cccccc;
+background-position: center;
+background-size: cover;
+position: relative;
+margin: auto;
+max-width: 900px;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+table,td,th{
+border:2px solid black;
+padding:15px;
+font-size:25px;
+}
+td{background-color:#f0efef;}
+th{background-color:green;}
+table{
+ width:100%;}
+th{ text-align:left;}
+h1{
+font-size:50px;}
+   }
+   
+</style>
+
+<table>
+<tr>
+<th>NAME</th>
+<th>CONSTITUENCY</th>
+<th>PARTY</th>
+</tr>
+<tr>
+<td>NARENDRA MODI</td>
+<td>VARANASI</td>
+<td>BJP</td>
+</tr>
+<tr>
+<td>AJAY RAI</td>
+<td>VARANASI</td>
+<td>CONGRESS</td>
+</tr>
+</table>
+<form action="party.php" method="GET"> 
+<img src="congress.jpg">
+<label class="container">
+<input type="radio" name="party" value="CONGRESS">CONGRESS</br>
+<span class="checkmark"></span>
+</label>
+<img src="bjp.jpg">
+<label class="container">
+<input type="radio" name="party" value="BJP">BJP</br>
+ <span class="checkmark"></span>
+</label>
+<input type="submit"value="Confirm">
+</form>
+</body>
+</html>
